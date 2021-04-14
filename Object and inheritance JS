@@ -1,0 +1,28 @@
+
+    function Shape(name, sides, sideLength) {
+  this.name = name;
+  this.sides = sides;
+  this.sideLength = sideLength;
+  this.calcPerimeter = function () {
+    console.log("The Perimeter of", this.name, this.sides * this.sideLength);
+  };
+}
+
+function Square(name, side, sideLength) {
+  this.name = name;
+  this.side = side;
+  this.sideLength = sideLength;
+  this.calcArea = function () {
+    console.log(this.side * this.side);
+  };
+}
+
+Square.prototype = Object.create(Shape.prototype);
+let square1 = new Square("jj", 4, 4);
+console.log(square1.calcArea());
+
+//   let square =  new Shape('square',4,5)
+//   let tringle = new Shape('Tringle', 3,3)
+//  console.log(tringle.name)
+//  tringle.calcPerimeter()
+//  square.calcPerimeter()
