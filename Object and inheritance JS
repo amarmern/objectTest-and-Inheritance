@@ -1,5 +1,5 @@
 
-    function Shape(name, sides, sideLength) {
+  function Shape(name, sides, sideLength) {
   this.name = name;
   this.sides = sides;
   this.sideLength = sideLength;
@@ -8,7 +8,7 @@
   };
 }
 
-function Square(name, side, sideLength) {
+function Area(name, side, sideLength) {
   this.name = name;
   this.side = side;
   this.sideLength = sideLength;
@@ -17,7 +17,7 @@ function Square(name, side, sideLength) {
   };
 }
 
-Square.prototype = Object.create(Shape.prototype);
+Area.prototype = Object.create(Shape.prototype);
 let square1 = new Square("jj", 4, 4);
 console.log(square1.calcArea());
 
